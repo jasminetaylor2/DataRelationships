@@ -17,10 +17,14 @@ module.exports = (sequelize) => {
       type: Sequelize.INTEGER,
       allowNull: false,
     },
+    directorPersonId: {
+      type: Sequelize.INTEGER,
+      foreignKey: {},
+    }
   }, { sequelize });
 
   Movie.associate = (models) => {
-    Movie.belongsTo(models.Person, {
+    Movie.belongsTo(models.Person, {    //tells sequelize movie can be asociated w/only one person
       as: 'director',
       foreignKey: {
         fieldName: 'directorPersonId',

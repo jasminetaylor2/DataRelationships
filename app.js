@@ -52,7 +52,7 @@ console.log('Testing the connection to the database...');
     
       })
     ]);
-    console.log(JSON.stringify(peopleInstances,null, 2)); //
+    console.log(JSON.stringify(peopleInstances,null, 2)); //data from Movie and People db are quired and write to console
 
     // Update the global variables for the people instances
     [bradBird, vinDiesel, eliMarienthal, craigTNelson, hollyHunter] = peopleInstances;
